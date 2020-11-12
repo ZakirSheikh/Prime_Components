@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.prime.ViewRecycler.ViewRecycler xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/dialog_list_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:enableFastScroll="true"
+        app:emptyView="@id/message"
+        android:visibility="visible"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:verticalThumbDrawable="@drawable/variable_length_scrollbar_selector"
+        tools:listitem="@layout/list_item" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:drawableStartCompat="@drawable/ic_placeholder"
+        android:drawablePadding="16dp"
+        android:ellipsize="end"
+        app:drawableTint="?attr/colorPrimary"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Nothing here!!!"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+</FrameLayout>

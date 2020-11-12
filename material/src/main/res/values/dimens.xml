@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="string" name ="fastscroller_default_thickness"/>
+    <dimen name="fastscroller_default_thickness">6dp</dimen>
+    <dimen name="fastscroller_margin">0dp</dimen>
+    <dimen name="fastscroller_minimum_range">50dp</dimen>
+
+    <dimen name="fastScroller_min_size">55dp</dimen>
+
+    <dimen name="fastscroller_popup_default_height">32dp</dimen>
+    <dimen name="fastscroll__bubble_corner">80dp</dimen>
+</resources>

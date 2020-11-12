@@ -1,0 +1,3 @@
+include ':material'
+include ':app'
+rootProject.name = "Prime Components"

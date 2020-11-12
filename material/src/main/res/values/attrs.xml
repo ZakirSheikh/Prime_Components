@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandableLayout">
+        <attr name="android:duration" />
+        <attr name="defaultExpanded" format="boolean" />
+        <!-- parallaxM can be set to a value between 0 and 1 to control how the child view is translated during the expansion.-->
+        <attr name="parallaxM" format="float" />
+        <attr name="android:orientation" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="leftEdgeSwipeOffset" format="dimension" />
+        <attr name="rightEdgeSwipeOffset" format="dimension" />
+        <attr name="topEdgeSwipeOffset" format="dimension" />
+        <attr name="bottomEdgeSwipeOffset" format="dimension" />
+        <attr name="showMode" format="enum">
+            <enum name="layDown" value="0" />
+            <enum name="pullOut" value="1" />
+        </attr>
+        <attr name="shouldCloseOnClick" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewRecycler">
+        <!--Must be set true in order to use fast Scroller-->
+
+        <attr name="enableFastScroll" format="boolean|reference" />
+        <!--This sets the fast scroller to its default size as defined in its Drawable-->
+        <attr name="fixedThumbSize" format="boolean|reference" />
+        <!--A StateListDrawable used as a horizontal Thumb-->
+        <attr name="horizontalThumbDrawable" format="reference" />
+        <!--A simple Drawable used as a Track for Horizontal Scroll-->
+        <attr name="horizontalTrackDrawable" format="reference" />
+        <!--A StateListDrawable used as a vertical Thumb-->
+        <attr name="verticalThumbDrawable" format="reference" />
+        <!--A simple Drawable used as a Track for Horizontal Scroll-->
+        <attr name="verticalTrackDrawable" format="reference" />
+        <!--This flag sets changs the hide behaviour of Scrollbars-->
+        <attr name="autoHideScrollbars" format="boolean|reference" />
+        <!--The delay in Mills for auto hide-->
+        <attr name="autoHideDelayMS" format="integer|reference" />
+        <!--The Size of Popup text-->
+        <attr name="popupTextSize" format="dimension|reference" />
+        <!--The color of Popup Text-->
+        <attr name="popupTextColor" format="color|reference" />
+        <!-- Empty view ID as child of same ViewGroup as this ViewRecycler (Usually FrameLayout)-->
+        <attr name="emptyView" format="reference" />
+        <!--I empty view is provided with textview with id message, the string provided here will be displayed their-->
+        <attr name="emptyMessage" format="reference|string" />
+
+
+        <!--Must be set to Drawable and Implement Interface TitleProvider-->
+        <attr name="popupDrawable" format="reference" />
+        <!--
+              The Position of popup Drawables WRT scrollbar Values: adjacent_center, adjacent_bottom
+              , centre.  \n
+              The value centre draws drawable to the center of the screen.
+              The value adjacent_center aligns the centre of popup with centre of scrollbar
+              The value adjacent_bottom aligns the bottom of popup with bottom of scrollbar
+              The value adjacent_top aligns the top of popup with top of scrollbar;
+        -->
+        <attr name="popupPosition" format="enum|reference">
+            <enum name="adjacent_center" value="0" />
+            <enum name="adjacent_bottom" value="1" />
+            <enum name="adjacent_top" value="2" />
+            <enum name="center" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FabMenu">
+        <!--Anchor label-->
+        <attr name="anchorLabel" format="reference|string" />
+        <!--The view of Menu item composed of ids, label(R.id.label), fab (with size mini)(R.id.fab), sublabel(R.id.sub_label)-->
+        <attr name="itemView" format="reference" />
+        <!--The menu res for which this is constructed-->
+        <attr name="menu" />
+        <!--Background of popup menu-->
+        <attr name="backgroundTint" />
+        <!--Clip anchor from popup-->
+        <attr name="clipAnchor" format="boolean|reference" />
+        <attr name="layout_anchorGravity" />
+    </declare-styleable>
+</resources>
